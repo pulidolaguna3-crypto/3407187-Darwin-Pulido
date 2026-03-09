@@ -1,173 +1,146 @@
-# 🏛️ Proyecto Semana 1: Ficha de Presentación de Dominio
+# 🏦 Ficha de Presentación de Dominio
+## Plataforma de Microcréditos — Semana 1
 
-> **🎯 ÚNICO ENTREGABLE**: Este proyecto es el **único entregable obligatorio** para aprobar la Semana 1.
-
----
-
-## 📋 Tu Dominio Asignado
-
-**Dominio**: [El instructor te asignará tu dominio al inicio del trimestre]
-
-> ⚠️ **POLÍTICA ANTICOPIA**: Cada aprendiz tiene un **dominio único**. Tu código debe reflejar tu dominio específico. Una implementación copiada o no adaptada resulta en calificación de cero.
+> 🎓 Proyecto del Bootcamp JavaScript ES2023  
+> 👩‍💻 Estudiante en proceso de aprendizaje
 
 ---
 
-## 🎯 Objetivo
+## 💰 ¿De qué trata este proyecto?
 
-Construir un script JavaScript que se ejecute en Node.js y muestre en la consola una **ficha de presentación** de una entidad de tu dominio asignado, aplicando todo lo aprendido esta semana: `console.log()`, tipos primitivos (string, number, boolean) y comentarios.
+Este script de JavaScript muestra en la consola una **ficha de presentación** de un crédito dentro de una plataforma de **microcréditos**.
 
-No necesitas variables todavía (esas llegan la semana próxima). Solo `console.log()`, tipos de datos, expresiones y comentarios bien estructurados.
-
----
-
-## 📋 Descripción
-
-Vas a construir un "carnet digital de consola" para tu dominio asignado. El script debe mostrar información organizada sobre **una entidad principal de tu dominio**: libro, medicamento, miembro del gimnasio, plato de menú, cuenta bancaria, etc.
-
-Adapta cada sección al contexto de tu dominio. Si no sabes cuál es tu dominio, pregunta a tu instructor.
+La plataforma permite que emprendedores accedan a financiamiento semilla para impulsar sus negocios. ¡Como darle un empujón a tu idea con código!
 
 ---
 
-## ✅ Requisitos
+## 🗂️ Mi Dominio: Plataforma de Microcréditos
 
-### Requisitos de contenido (adaptados a tu dominio)
-
-El script debe mostrar **como mínimo**:
-
-1. Nombre de la **entidad principal** de tu dominio (string)
-2. Identificador o código único (string o number)
-3. Descripción o categoría (string)
-4. Al menos **un dato numérico** relevante al dominio (number)
-5. Al menos **dos valores boolean** que representen estados de la entidad
-6. Una **expresión aritmética** calculada (ej: precio con descuento, total, capacidad restante)
-7. Una sección de **resumen del dominio**
-
-### Requisitos técnicos
-
-- [ ] El archivo se llama `script.js` y corre con `node script.js`
-- [ ] Usa `console.log()` para toda la salida
-- [ ] Incluye como mínimo **3 comentarios** que expliquen secciones del código
-- [ ] La salida está organizada con separadores visuales (líneas de `-` o `=`)
-- [ ] Los comentarios están escritos en **español**
-- [ ] No hay errores al ejecutar con `node`
+| 📌 Campo | 💡 Descripción |
+|---|---|
+| **Dominio** | Plataforma de Microcréditos |
+| **Nombre de la plataforma** | PLATAFORMA DE MICROCRÉDITOS |
+| **Entidad principal** | Crédito |
+| **Crédito de ejemplo** | Crédito Semilla Emprendedor |
+| **Código del crédito** | MCR-016 |
+| **Categoría** | Crédito Productivo - Microempresa |
+| **Estado** | Activo |
 
 ---
 
-## 💡 Ejemplo de salida esperada
+## 🧮 ¿Qué calcula el script?
 
-> **Nota**: El ejemplo usa "Planetario" porque **NO es un dominio asignable**. Adapta la estructura a tu dominio asignado.
+El script calcula automáticamente el **total a pagar** con interés:
+
+```
+$1.500.000 × (1 + 0.03 × 12) = $2.040.000
+```
+
+Esto representa el monto final con una **tasa del 3% mensual a 12 meses**, lo que significa que:
+- ✅ El crédito está **al día en pagos** (`true`)
+- ✅ **No requiere codeudor** (`false`)
+
+---
+
+## 📚 ¿Qué aprendí esta semana?
+
+Estos son los conceptos de JavaScript que apliqué en el proyecto:
+
+### 🔤 String (texto)
+Valores escritos entre comillas. Se usan para nombres, códigos y categorías.
+```js
+'Crédito Semilla Emprendedor'
+'MCR-016'
+'Crédito Productivo - Microempresa'
+```
+
+### 🔢 Number (número)
+Valores numéricos sin comillas. Se usan para montos, tasas y plazos.
+```js
+1500000     // monto del crédito
+0.03        // tasa de interés mensual
+12          // plazo en meses
+```
+
+### ✅ Boolean (verdadero o falso)
+Solo puede ser `true` o `false`. Se usa para representar estados del crédito.
+```js
+true    // al día en pagos
+false   // no requiere codeudor
+```
+
+### ➕ Expresión aritmética
+Un cálculo que JavaScript resuelve automáticamente.
+```js
+1500000 * (1 + 0.03 * 12)   // resultado: 2.040.000
+```
+
+---
+
+## 📋 Requisitos cumplidos
+
+- [x] ✅ Nombre de la entidad principal (string)
+- [x] ✅ Identificador o código único (string)
+- [x] ✅ Descripción o categoría (string)
+- [x] ✅ Al menos un dato numérico (number)
+- [x] ✅ Dos valores boolean
+- [x] ✅ Una expresión aritmética calculada
+- [x] ✅ Sección de resumen del dominio
+- [x] ✅ Mínimo 3 comentarios en español
+- [x] ✅ Salida organizada con separadores visuales
+- [x] ✅ Corre sin errores con `node script.js`
+
+---
+
+## 📊 Salida esperada en consola
 
 ```
 =========================================
-    PLANETARIO MUNICIPAL - FICHA #001
+  PLATAFORMA DE MICROCRÉDITOS - FICHA #16
 =========================================
 
 INFORMACIÓN GENERAL
 --------------------
-Nombre:          Sistema Solar en 3D
-Código:          EXH-001
-Categoría:       Astronomía - Nivel básico
+Microcrédito:    Crédito Semilla Emprendedor
+Código:          MCR-016
+Categoría:       Crédito Productivo - Microempresa
 Estado:          Activo
 
 DETALLES
 --------------------
-Capacidad:       45 personas
-Duración (min):  50
-Precio:          12000
-Con descuento:   9600
-Disponible:      true
-Accesible:       true
+Monto del crédito:      1500000
+Total a pagar:          2040000
+Al día en pagos:        true
+Requiere codeudor:      false
 
 RESUMEN DEL DOMINIO
 --------------------
-Dominio:         Planetario
-Entidad:         Exhibición
-Total registros: 12
+Dominio:          Plataforma de Microcréditos
+Entidad:          crédito
+Total registros:  248
 
 =========================================
-  Ficha generada con JavaScript ES2023
+  ¡Impulsa tu negocio con JavaScript!   
 =========================================
 ```
 
 ---
 
-## 💡 Ejemplos de Adaptación por Dominio
-
-| Si tu dominio es... | Tu entidad principal es...   | Datos numéricos relevantes           |
-| ------------------- | ---------------------------- | ------------------------------------ |
-| Biblioteca          | Libro                        | páginas, año publicación, ejemplares |
-| Farmacia            | Medicamento                  | precio, stock, dosis                 |
-| Gimnasio            | Miembro o rutina             | días, repeticiones, peso             |
-| Restaurante         | Platillo                     | precio, calorías, tiempo preparación |
-| Banco               | Cuenta o producto financiero | saldo, tasa, plazo                   |
-| Hospital            | Paciente o servicio médico   | habitación, duración, costo          |
-
----
-
-## 📁 Estructura del Proyecto
+## 🗂️ Estructura del proyecto
 
 ```
 3-proyecto/
-├── README.md         ← Este archivo
+├── README.md        ← Este archivo
 └── starter/
-    └── script.js     ← Tu punto de partida
+    └── script.js    ← Mi código JavaScript
 ```
 
 ---
 
-## 🛠️ Cómo Empezar
+## 💡 Reflexión personal
 
-1. **Confirma tu dominio** con el instructor
-2. Abre `starter/script.js`
-3. Lee los comentarios y TODOs
-4. Adapta cada TODO al contexto de **tu** dominio asignado
-5. Ejecuta para verificar: `node starter/script.js`
-6. Ajusta el formato hasta que la salida sea legible y organizada
+> Este fue mi primer script de JavaScript. Aprendí que programar es darle instrucciones claras a la consola, y que cada tipo de dato (string, number, boolean) tiene su propósito. La plataforma de microcréditos fue un dominio muy interesante para aprender porque trabaja con datos reales del mundo financiero, como tasas de interés y plazos de pago. Ver cómo JavaScript calcula automáticamente el total a pagar con una simple fórmula fue lo que más me impresionó. 🚀
 
 ---
 
-## 🏃 Cómo Ejecutar
-
-```bash
-cd bootcamp/week-01/3-proyecto
-node starter/script.js
-```
-
----
-
-## 📊 Criterios de Evaluación
-
-| Criterio                                 | Puntos      |
-| ---------------------------------------- | ----------- |
-| El script corre sin errores              | 20 pts      |
-| Muestra los 7 datos requeridos           | 25 pts      |
-| Al menos 3 comentarios en español        | 15 pts      |
-| Salida organizada y legible              | 15 pts      |
-| Usa string, number Y boolean             | 15 pts      |
-| Adaptación coherente al dominio asignado | 10 pts      |
-| **Total**                                | **100 pts** |
-
-> Mínimo para aprobar: **70 puntos**
-
----
-
-## ❓ Preguntas Frecuentes
-
-**P: ¿Qué dominio debo usar?**
-R: El que te asigne tu instructor. Si no lo sabes, pregúntale antes de empezar.
-
-**P: ¿Puedo ver el código de un compañero?**
-R: No. Cada dominio es único — tu implementación debe ser original y coherente con tu dominio.
-
-**P: ¿Puedo usar variables?**
-R: No todavía. Esta semana solo `console.log()`, valores literales y comentarios. Las variables llegan en la Semana 2.
-
-**P: ¿Qué pasa si mi dominio no aparece en la tabla de ejemplos?**
-R: Si tu dominio es distinto, aplica la misma lógica: elige una entidad principal con nombre, código, descripción, datos numéricos y estados booleanos.
-
----
-
-## 🔗 Navegación
-
-⬅️ [Volver a Prácticas](../2-practicas/)
-➡️ [Semana 2: Variables y Tipos de Datos](../../week-02/README.md)
+*🎓 Bootcamp JavaScript ES2023 — Semana 1*
