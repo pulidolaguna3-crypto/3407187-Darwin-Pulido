@@ -1,0 +1,99 @@
+# Proyecto Semana 03: Calculadora de Dominio
+
+> **🎯 ÚNICO ENTREGABLE**: Este proyecto es el **único entregable obligatorio** para aprobar la semana.
+
+## 🎯 Objetivo
+
+Construir una **calculadora multi-operación** aplicada al dominio de **Plataforma de Microcréditos**, usando todos los operadores aprendidos esta semana: aritméticos, de asignación compuesta, de comparación estricta y lógicos.
+
+## 📋 Tu Dominio Asignado
+
+**Dominio**: Plataforma de Microcréditos 💳
+
+Una plataforma de microcréditos otorga préstamos de bajo monto a personas naturales o microempresarios. La calculadora simula el ciclo completo de un crédito: desde el cálculo de cuotas e intereses, hasta la validación de elegibilidad, gestión de mora y análisis de riesgo.
+
+Ejemplos de operaciones propias del dominio:
+
+- 💰 **Microcrédito**: calcular cuota mensual, interés total, costo del seguro
+- 📊 **Scoring crediticio**: validar elegibilidad, capacidad de pago, historial limpio
+- ⚠️ **Gestión de mora**: detectar días vencidos, aplicar recargos, calcular condonaciones
+- 🔄 **Refinanciación**: verificar condiciones para reestructurar un crédito activo
+- 📈 **Límites de crédito**: diferenciar entre clientes nuevos y recurrentes
+
+## ✅ Requisitos Funcionales
+
+La calculadora incluye:
+
+1. **Operaciones aritméticas** (`+`, `-`, `*`, `/`, `%`)
+   - Calcular interés total, costo del seguro, costo total a pagar, cuota mensual y porcentaje del límite utilizado
+2. **Operadores de asignación compuesta** (`+=`, `-=`, `*=`, `/=`)
+   - Simular abonos al saldo pendiente, aplicar mora y acumular recaudos sin reescribir la variable completa
+3. **Comparación estricta** (`===`, `!==`, `>=`, `<=`, `>`, `<`)
+   - Validar estado del crédito, días de mora, cuotas pagadas y nivel de cuota con `===` (nunca con `==`)
+4. **Operadores lógicos** (`&&`, `||`, `!`)
+   - Combinar condiciones de scoring: aprobación de crédito, alertas de riesgo, elegibilidad para aumento de límite y refinanciación
+5. **Numeric separators** para montos en pesos (`1_500_000`)
+6. **`console.log()`** con resultados claros, etiquetados y en formato colombiano
+
+## 💡 Lógica de Negocio del Dominio
+
+El archivo `starter/script.js` implementa el siguiente flujo:
+
+| Variable / Constante | Descripción |
+|---|---|
+| `MONTO_BASE_CREDITO` | Monto mínimo otorgable: $500.000 |
+| `TASA_INTERES_MENSUAL` | Tasa del 2.5% mensual |
+| `COMISION_APERTURA` | Cobro fijo de $15.000 por apertura |
+| `SEGURO_MENSUAL` | Seguro de vida de $8.000 por mes |
+| `LIMITE_CREDITO_NUEVO` | Límite máximo para clientes nuevos: $1.500.000 |
+| `LIMITE_CREDITO_RECURRENTE` | Límite para clientes con historial: $5.000.000 |
+| `montoPrestado` | Monto real solicitado: $800.000 |
+| `plazoMeses` | Plazo elegido: 6 meses |
+
+## 🛠️ Archivos del Proyecto
+
+```
+3-proyecto/
+├── README.md          ← estás aquí
+├── starter/
+│   └── script.js      ← calculadora de microcréditos (tu entregable)
+└── solution/
+    └── script.js      ← referencia del instructor (no copiar)
+```
+
+## 🚀 Cómo ejecutar
+
+```bash
+node starter/script.js
+```
+
+Salida esperada por secciones:
+```
+=== Operaciones básicas ===
+=== Asignación compuesta ===
+=== Validaciones con === ===
+=== Condiciones lógicas ===
+=== Resumen ===
+```
+
+## 📌 Entregables
+
+1. `script.js` funcional, adaptado al dominio de microcréditos
+2. Todas las operaciones etiquetadas con `console.log()` en español
+3. Al menos una validación con `===` y una condición con `&&` o `||`
+4. Código comentado en español explicando la lógica de negocio
+
+## 📊 Criterios de Evaluación
+
+| Criterio                                       | Puntos  |
+| ---------------------------------------------- | ------- |
+| La calculadora funciona sin errores            | 20      |
+| Uso correcto de operadores aritméticos         | 20      |
+| Uso de asignación compuesta (mínimo 2)         | 15      |
+| Uso de `===` / `!==` (nunca `==`)              | 15      |
+| Uso de operadores lógicos                      | 10      |
+| Coherencia con el dominio asignado             | 10      |
+| Nomenclatura en inglés, comentarios en español | 10      |
+| **Total**                                      | **100** |
+
+> ⚠️ **Penalizaciones**: -5 pts por cada uso de `var`, -5 pts por usar `==` en lugar de `===`
